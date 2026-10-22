@@ -1,1 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Poppins:wght@300;400;600&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #090014;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    background: #100020;
+    border-bottom: 1px solid #30204b;
+}
+
+nav h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: #caff00;
+    font-size: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+nav a:hover {
+    color: #ff55e8;
+}
+
+button, .main-btn {
+    cursor: pointer;
+    border: none;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-btn {
+    padding: 12px 18px;
+    background: #caff00;
+    color: #090014;
+    border-radius: 30px;
+}
+
+.nav-btn:hover {
+    background: #ff55e8;
+    transform: scale(1.08);
+}
+
+.hero {
+    min-height: 650px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 70px 10%;
+    overflow: hidden;
+    background:
+        radial-gradient(ellipse at 80% 50%, #441064 0%, transparent 45%),
+        radial-gradient(ellipse at 20% 80%, #210b45 0%, transparent 45%),
+        #090014;
+}
+
+.stars {
+    position: absolute;
+    top: 40px;
+    right: 10%;
+    color: #caff00;
+    letter-spacing: 15px;
+    animation: twinkle 2s infinite alternate;
+}
+
+.hero-content {
+    z-index: 2;
+    max-width: 600px;
+}
+
+.tag {
+    color: #caff00;
+    font-size: 11px;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(48px, 7vw, 85px);
+    line-height: 1.15;
+    font-weight: 800;
+}
+
+h1 span {
+    color: #ff55e8;
+    text-shadow: 0 0 30px #ff55e866;
+}
+
+.description {
+    color: #c7bbd7;
+    margin: 25px 0 35px;
+    max-width: 350px;
+    line-height: 1.8;
+}
+
+.main-btn {
+    display: inline-block;
+    padding: 17px 25px;
+    color: #090014;
+    background: #caff00;
+    border-radius: 5px;
+}
+
+.main-btn:hover {
+    background: #ff55e8;
+    box-shadow: 0 0 30px #ff55e888;
+    transform: translateY(-5px);
+}
+
+.alien {
+    position: absolute;
+    right: 15%;
+    top: 28%;
+    font-size: 150px;
+    animation: float 3s ease-in-out infinite;
+    filter: drop-shadow(0 0 30px #caff00);
+}
+
+.ufo {
+    position: absolute;
+    font-size: 70px;
+    top: -70px;
+    left: 80px;
+    animation: float 2s ease-in-out infinite alternate;
+}
+
+.planet {
+    position: absolute;
+    bottom: 40px;
+    right: 8%;
+    font-size: 100px;
+    animation: spin 20s linear infinite;
+}
+
+.menu {
+    padding: 100px 8%;
+    text-align: center;
+    background: #100020;
+}
+
+.menu h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(25px, 4vw, 38px);
+    margin-bottom: 50px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.card {
+    padding: 35px 25px;
+    background: #190b2c;
+    border: 1px solid #38234e;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-12px) rotate(-1deg);
+    border-color: #caff00;
+    box-shadow: 0 15px 40px #caff0018;
+}
+
+.featured {
+    border-color: #ff55e8;
+    box-shadow: 0 0 30px #ff55e811;
+}
+
+.emoji {
+    font-size: 65px;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #b9abc9;
+    font-size: 13px;
+    line-height: 1.8;
+    min-height: 45px;
+}
+
+.card h4 {
+    color: #caff00;
+    font-size: 25px;
+    margin: 25px 0;
+}
+
+.card button {
+    background: transparent;
+    color: #ff55e8;
+    border: 1px solid #ff55e8;
+    padding: 13px 20px;
+    border-radius: 5px;
+}
+
+.card button:hover {
+    background: #ff55e8;
+    color: #090014;
+}
+
+footer {
+    text-align: center;
+    padding: 35px 15px;
+    background: #090014;
+    color: #8d7a9f;
+    font-size: 10px;
+    letter-spacing: 2px;
+    line-height: 3;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-25px);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes twinkle {
+    from {
+        opacity: 0.3;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        padding: 20px 5%;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    nav h2 {
+        font-size: 16px;
+    }
+
+    .hero {
+        min-height: 750px;
+        align-items: flex-start;
+        padding: 80px 7%;
+    }
+
+    .alien {
+        top: auto;
+        bottom: 100px;
+        right: 10%;
+        font-size: 100px;
+    }
+
+    .ufo {
+        font-size: 50px;
+    }
+
+    .planet {
+        font-size: 65px;
+        bottom: 30px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .menu {
+        padding: 70px 7%;
+    }
+}
