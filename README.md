@@ -1,4 +1,4 @@
-# ALIEN-INTERNET-CAFE-
+# ALIEN-INTERNET-CAF-
 # 👽 COSMO CAFE | Alien Internet Café 🛸
 
 > ☕ Coffee so powerful, you'll see 7 dimensions before breakfast.
